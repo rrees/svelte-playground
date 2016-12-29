@@ -5,14 +5,29 @@
   <meta charset="utf-8">
 </head>
 <body>
-  <main></main>
+  <main>
+    <h1>Examples</h1>
+
+    <h2>Hello world</h2>
+
+    <div id="hello-world"></div>
+
+    <h2>Greeter</h2>
+
+    <div id="greeter"></div>
+  </main>
   <script src='../out/HelloWorld.js'></script>
+  <script src='../out/Greeter.js'></script>
   <script>
-    var app = new HelloWorld({
-      target: document.querySelector( 'main' ),
+    var helloWorldApp = new HelloWorld({
+      target: document.querySelector( '#hello-world' ),
       data: {
         name: 'world'
       }
+    });
+
+    var greeterApp = new Greeter({
+      target: document.querySelector('#greeter')
     });
   </script>
 </body>
