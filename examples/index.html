@@ -15,9 +15,15 @@
     <h2>Greeter</h2>
 
     <div id="greeter"></div>
+
+    <h2>Simple interest calculator</h2>
+
+    <div id="interest"></div>
   </main>
   <script src='../out/HelloWorld.js'></script>
   <script src='../out/Greeter.js'></script>
+  <script src='../out/Interest.js'></script>
+
   <script>
     var helloWorldApp = new HelloWorld({
       target: document.querySelector( '#hello-world' ),
@@ -28,6 +34,15 @@
 
     var greeterApp = new Greeter({
       target: document.querySelector('#greeter')
+    });
+
+    var interestApp = new Interest({
+      target: document.querySelector('#interest'),
+      data: {
+        principal: 10000,
+        rate: 3,
+        term: 24
+      }
     });
   </script>
 </body>

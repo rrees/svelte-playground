@@ -1,0 +1,17 @@
+
+<form>
+  <div class="form-group">
+    <label for="principal">Principal</label>
+    <input id="principal" type="number" required placeholder="The total amount lent" bind:value="principal">
+  </div>
+  <div class="form-group">
+    <label for="rate">Rate</label>
+    <input id="rate" type="number" required placeholder="The interest rate" bind:value="rate">
+  </div>
+  <div class="form-group">
+    <label for="term">Term</label>
+    <input id="term" type="number" required placeholder="Months to repay" bind:value="term">
+  </div>
+</form>
+
+<p>Total to repay: {{totalPayments}}</p>
