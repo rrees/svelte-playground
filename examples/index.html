@@ -33,7 +33,10 @@
     });
 
     var greeterApp = new Greeter({
-      target: document.querySelector('#greeter')
+      target: document.querySelector('#greeter'),
+      data: {
+        name: ""
+      }
     });
 
     var interestApp = new Interest({
