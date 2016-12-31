@@ -14,4 +14,21 @@
   </div>
 </form>
 
-<p>Total to repay: {{totalPayments}}</p>
+<p>Total to repay: {{totalPayment}}</p>
+
+<script>
+  export default {
+    data () {
+      return {
+        principal: 10000,
+        rate: 3,
+        term: 24
+      }
+    },
+    computed: {
+      totalPayment: (principal, rate) => {
+        return ((principal * rate) / 100) + principal;
+      }
+    }
+  };
+</script>
