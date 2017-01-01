@@ -14,7 +14,10 @@
   </div>
 </form>
 
-<p>Total to repay: {{totalPayment}}</p>
+<ul>
+  <li>Total to repay: {{totalPayment}}</li>
+<li>Monthly payment: {{individualPayment}}</li>
+</ul>
 
 <script>
   export default {
@@ -28,7 +31,8 @@
     computed: {
       totalPayment: (principal, rate) => {
         return ((principal * rate) / 100) + principal;
-      }
+      },
+      individualPayment: (totalPayment, term) => totalPayment / term
     }
   };
 </script>
