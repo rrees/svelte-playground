@@ -30,7 +30,7 @@
     },
     computed: {
       totalPayment: (principal, rate) => {
-        return ((principal * rate) / 100) + principal;
+        return ((principal * rate) / 100) + (principal * 1.0);
       },
       individualPayment: (totalPayment, term) => totalPayment / term
     }
