@@ -1,0 +1,30 @@
+
+<div class="counter">
+  <p class="count">{{count}}</p>
+
+  <div class="buttons">
+    <button on:click="set({ count: count + 1 })">+</button>
+    <button on:click="set({ count: count - 1 })">-</button>
+  </div>
+</div>
+
+<script>
+  export default {
+    data () {
+      return  {
+        count: 0
+      }
+    }
+  }
+</script>
+
+<style>
+  .counter{
+    display: flex;
+    flex-direction: column;
+  }
+  .count {
+    font-size: 2rem;
+    text-align: center;
+  }
+</style>
